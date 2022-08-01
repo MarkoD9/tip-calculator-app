@@ -38,6 +38,7 @@ body {
     width: 100%;
     flex: 1.1;
     padding: 50px;
+    box-sizing: border-box;
 }
 
 .result-wrapper {
@@ -83,7 +84,7 @@ text-align: end;
 border: none;
 background-color: hsl(189, 41%, 97%);
 border-radius: 5px;
-
+color: var(--veryDarkCyan);
 font-family: "Space Mono", monospace;
 background-repeat: no-repeat;
 background-position: center left;
@@ -120,6 +121,7 @@ input:first-of-type {
     gap: 15px;
     margin-top: 5px;
     margin-bottom: 40px;
+    box-sizing: border-box;
 }
 .selecttip-btn {
     background-color: var(--veryDarkCyan);
@@ -184,6 +186,8 @@ input:first-of-type {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+
+    margin-top: 15px;
 }
 
 .total-wrapper {
@@ -220,5 +224,36 @@ input:first-of-type {
     opacity: 0.3;
 }
 
+@media (max-width: 800px) { 
+    body {
+        height: auto;
+        padding-top: 100px;
+    }
+
+    .card-wrapper { 
+        flex-direction: column;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .input-wrapper {
+        padding: 30px;
+    }
+
+    .selecttip-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .result-wrapper { 
+        margin: 25px;
+        padding: 25px;
+    }
+    .total-wrapper {
+        margin-bottom: 45px;
+    }
+    .result-wrapper h1 {
+    font-size: 2rem;
+}
+}
 
 
