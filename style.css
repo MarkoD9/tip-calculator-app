@@ -30,6 +30,8 @@ body {
   
   border-radius: 30px;
   width: 100%;
+
+  box-shadow: 0px 15px 25px 5px rgba(0,0,0,0.05);
 }
 
 .input-wrapper {
@@ -141,8 +143,8 @@ input:first-of-type {
     color: var(--veryDarkCyan);
 }
 
-.selecttip-btn:active {
-    background-color: var(--strongCyan);
+.selecttip-btn:active,.selecttip-btn-active {
+    background-color: var(--strongCyan) !important;
     color: var(--veryDarkCyan);
 }
 

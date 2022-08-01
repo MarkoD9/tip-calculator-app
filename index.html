@@ -21,16 +21,16 @@
     <input type="number" placeholder="0" name="Bill" id="bill-input" step=".01">
     <span class="label">Selected Tip %</span>
     <div class="selecttip-wrapper">
-      <button class="selecttip-btn">5%</button>
-      <button class="selecttip-btn">10%</button>
-      <button class="selecttip-btn">15%</button>
-      <button class="selecttip-btn">25%</button>
-      <button class="selecttip-btn">50%</button>
-      <input class=""></input>
+      <button class="selecttip-btn" id="5">5%</button>
+      <button class="selecttip-btn" id="10">10%</button>
+      <button class="selecttip-btn" id="15">15%</button>
+      <button class="selecttip-btn" id="25">25%</button>
+      <button class="selecttip-btn" id="50">50%</button>
+      <input id="tip-input"></input>
     </div>
     <div class="number-of-people-top">
       <span class="label">Number of People</span>
-      <span class="label zeroalert hide">Can't be Zero</span>
+      <span class="label zeroalert hide" id = "zeroalert">Can't be Zero</span>
     </div>
     <input type="number" name="Number of People" placeholder="0" oninput="this.value=(parseInt(this.value)||0)" id="people-input">
   </div>
@@ -41,14 +41,14 @@
         <p class="label-result">Tip Amount</p>
         <span class="label-result-description">/ person</span>
       </div>
-      <h1 class="result" id="tip-amount-text">$0.00</h1>
+      <h1 class="result" id="tip-amount-output">$0.00</h1>
     </div>
     <div class="total-wrapper">
       <div class="label-result-wrapper">
         <p class="label-result">Total</p>
         <span class="label-result-description">/ person</span>
       </div>
-      <h1 class="result" id="total-text">$0.00</h1>
+      <h1 class="result" id="total-output">$0.00</h1>
     </div>
    </div>
 
