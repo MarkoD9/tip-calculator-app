@@ -5,40 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<div class="card-wrapper">
+  <div class="input-wrapper">
+    <span class="label">Bill</span>
+    <input type="number" placeholder="0" name="Bill" id="bill-input" step=".01">
+    <span class="label">Selected Tip %</span>
+    <div class="selecttip-wrapper">
+      <button class="selecttip-btn">5%</button>
+      <button class="selecttip-btn">10%</button>
+      <button class="selecttip-btn">15%</button>
+      <button class="selecttip-btn">25%</button>
+      <button class="selecttip-btn">50%</button>
+      <input class=""></input>
+    </div>
+    <div class="number-of-people-top">
+      <span class="label">Number of People</span>
+      <span class="label zeroalert hide">Can't be Zero</span>
+    </div>
+    <input type="number" name="Number of People" placeholder="0" oninput="this.value=(parseInt(this.value)||0)" id="people-input">
   </div>
+  <div class="result-wrapper">
+   <div class="info-wrapper">
+    <div class="tip-amount-wrapper">
+      <div class="label-result-wrapper">
+        <p class="label-result">Tip Amount</p>
+        <span class="label-result-description">/ person</span>
+      </div>
+      <h1 class="result" id="tip-amount-text">$0.00</h1>
+    </div>
+    <div class="total-wrapper">
+      <div class="label-result-wrapper">
+        <p class="label-result">Total</p>
+        <span class="label-result-description">/ person</span>
+      </div>
+      <h1 class="result" id="total-text">$0.00</h1>
+    </div>
+   </div>
+
+   <button class="reset-btn"  id="reset-btn">RESET</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

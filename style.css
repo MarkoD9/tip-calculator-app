@@ -1,0 +1,224 @@
+
+:root {
+    --strongCyan: hsl(172, 67%, 45%);
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyanOne: hsl(186, 14%, 43%);
+    --darkGrayishCyanTwo: hsl(184, 14%, 56%);
+    --lightGrayishCyanOne: hsl(185, 41%, 84%);
+    --lightGrayishCyanTwo: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+  }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+  background-color: var(--lightGrayishCyanOne);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.card-wrapper {
+  background-color: var(--White);
+  max-width: 920px; 
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  
+  border-radius: 30px;
+  width: 100%;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1.1;
+    padding: 50px;
+}
+
+.result-wrapper {
+    flex: 1;
+    background-color: var(--veryDarkCyan);
+    border-radius: 15px;
+    padding: 40px;
+    box-sizing: border-box;
+    margin: 30px;
+    margin-left: 0;
+}
+
+.label {
+    color: hsl(186, 14%, 43%);
+
+    margin-bottom: 5px;
+}
+
+/* Hide Arrows on Input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide Arrows on Input Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  ::placeholder {
+    color: hsl(185, 41%, 84%);
+}
+
+
+
+input {
+    box-sizing: border-box;
+    height: 45px;
+width: 100%;
+font-size: 24px;
+text-align: end;
+border: none;
+background-color: hsl(189, 41%, 97%);
+border-radius: 5px;
+
+font-family: "Space Mono", monospace;
+background-repeat: no-repeat;
+background-position: center left;
+background-origin: content-box;
+padding-left: 20px;
+padding-right: 20px;
+caret-color: var(--strongCyan);
+
+}
+input:focus {
+    outline-color: var(--strongCyan);
+}
+
+input:invalid {
+    outline-color: #C35332;
+}
+
+#bill-input {
+
+    background-image: url(images/icon-dollar.svg);
+}
+
+#people-input {
+
+    background-image: url(images/icon-person.svg);
+}
+
+input:first-of-type {
+    margin-bottom: 40px;
+}
+.selecttip-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+.selecttip-btn {
+    background-color: var(--veryDarkCyan);
+    color: var(--White);
+    font-size: 22px;
+    height: 45px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: normal;
+    border: none;
+
+  font-family: "Space Mono", monospace;
+}
+
+.selecttip-btn:hover {
+    background-color: var(--lightGrayishCyanOne);
+    color: var(--veryDarkCyan);
+}
+
+.selecttip-btn:active {
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+}
+
+.selecttip-wrapper > input {
+    width: 1fr;
+    margin: 0;
+}
+
+.number-of-people-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.zeroalert {
+    color:  #C35332;
+}
+
+.hide {
+    display: none;
+}
+
+
+.result-wrapper p {
+    color: white;
+    margin: 0;
+}
+
+.result-wrapper h1 {
+    color: var(--strongCyan);
+    margin: 0;
+    font-size: 3rem;
+}
+
+.label-result-description {
+    color: var(--darkGrayishCyanOne);
+    font-size: 0.8rem;
+}
+
+.tip-amount-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.total-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.result-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reset-btn {
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+    font-size: 22px;
+    height: 45px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: normal;
+    border: none;
+
+  font-family: "Space Mono", monospace;
+}
+
+.reset-btn:hover {
+    background-color: var(--lightGrayishCyanOne);
+}
+
+.reset-btn:disabled {
+    opacity: 0.3;
+}
+
+
+
